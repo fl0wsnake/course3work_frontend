@@ -2,14 +2,10 @@
 .ui.relaxed.divided.list
     h3.ui.header(v-if="$store.state.rooms.length") Rooms:
     h3.ui.header(v-else) No rooms yet.
-    <!-- .item(v-for="room in rooms", :class="{'in-room': room.is_user_in, 'have-not-knocked': !room.knocked, 'have-knocked': !room.knocked}") -->
     .item(v-for="room in rooms")
         .content
             .header(@click="joinRoom(room)") {{room.name}}
                 .description Owner: {{room.owner.username}}, {{room.users_count}} users{{room.as_master ? ", as master":""}}{{room.knocked ? ", knocked" : ""}}
-        <!-- .right.floated.content -->
-            <!-- .ui.mini.button(v-if="!room.is_user_in", :class="{disabled: room.knocked}") {{ room.knocked ? "Already knocked" : "Knock" }} -->
-            <!-- i.warning.icon(v-if="room.knocked") -->
 </template>
 
 <script>
@@ -53,13 +49,4 @@ export default {
 </script>
 
 <style scoped>
-/* .in-room {
-    background-color: rgb(217, 231, 120)
-}
-.have-not-knocked {
-    background-color: rgb(217, 231, 120)
-}
-.have-knocked {
-    background-color: rgb(217, 231, 120)
-} */
 </style>

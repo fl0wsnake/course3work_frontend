@@ -112,13 +112,6 @@ export default {
     beforeDestroy(to, from, next){
         this.$store.dispatch("leaveRoom")
     },
-    // updated(){
-    // console.log(`updated ${JSON.stringify(this.$store.state.current_room)}`)
-    // }
-    //    beforeRouteLeave(to, from, next){
-    //        this.$store.dispatch("leaveRoom")
-    //        next()
-    //    },
 }
 </script>
 

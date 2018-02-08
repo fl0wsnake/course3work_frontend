@@ -5,9 +5,6 @@
         .content
             .header(@click="joinRoom(room)") {{room.name}}
                 .description Owner: {{room.owner.username}}, {{room.users_count}} users{{room.as_master?", as master":""}}
-        <!-- .right.floated.content -->
-            <!-- .ui.mini.button(v-if="!room.is_user_in", :class="{disabled: room.knocked}") {{ room.knocked ? "Already knocked" : "Knock" }} -->
-            <!-- i.warning.icon(v-if="room.knocked") -->
 </template>
 
 <script>
